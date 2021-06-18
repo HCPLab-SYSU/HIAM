@@ -3,7 +3,7 @@ In this work, we focus on the metro ridership of 5:30 - 23:30 and utilize the me
 
 Specifically, the data of input sequence consists of incomplete OD matrix(IOD~t~), unfinished order vector(U~t~), and DO matrix(DO~t~) and our online origin-destination prediction could be denoted as follows.
 
-​																${IOD, U, DO}_{t-n+i}$--predict-->  ${OD, DO}_{t+j}$
+​																![image](https://github.com/GillianZhu/HIAM/blob/master/data/prediction_formula.png)
 
 ​													where i=1,2,...,n and j=1,2,...,m. n=4, m=4
 
