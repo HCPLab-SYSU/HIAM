@@ -1,7 +1,7 @@
 # SHMOD & HZMOD Dataset
 In this work, we focus on the metro ridership of 5:30 - 23:30 and utilize the metro OD/DO distribution of the previous four time intervals (15minutes x 4 = 60minutes) to predict the metro OD/DO distribution of future four time intervals (15minutes x 4 = 60minutes). 
 
-Specifically, the data of input sequence consists of incomplete OD matrix(IOD~t~), unfinished order vector(U~t~), and DO matrix(DO~t~) and our online origin-destination prediction could be denoted as follows.
+Specifically, the data of input sequence consists of incomplete OD matrix(IOD), unfinished order vector(U), and DO matrix(DO) and our online origin-destination prediction could be denoted as follows.
 
 ​																![image](https://github.com/GillianZhu/HIAM/blob/master/data/prediction_formula.png)
 
