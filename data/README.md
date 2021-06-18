@@ -3,9 +3,9 @@ In this work, we focus on the metro ridership of 5:30 - 23:30 and utilize the me
 
 Specifically, the data of input sequence consists of incomplete OD matrix(IOD~t~), unfinished order vector(U~t~), and DO matrix(DO~t~) and our online origin-destination prediction could be denoted as follows.
 
-​																$\{IOD, U, DO\}_{t-n+i} {~~}\Rightarrow{~~} \{OD, DO\}_{t+j}$
+​																${IOD, U, DO}_{t-n+i}$--predict-->  ${OD, DO}_{t+j}$
 
-​													where $i=1,2,...,n$ and $j=1,2,...,m$. n=4, m=4
+​													where i=1,2,...,n and j=1,2,...,m. n=4, m=4
 
 We release two datasets named SHMOD and HZMOD, respectively. Each dataset is divided into a training set, a validation set and a testing set, and also contains corresponding metro graph information. For each set, we release four `pkl` files, three for metro OD ridership distribution data, and one for metro DO ridership distribution data.
 
