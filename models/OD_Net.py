@@ -109,7 +109,7 @@ class ODNet(torch.nn.Module):
     def encoder_first_layer(self,
                             batch,
                             finished_hidden,
-                            unfinished_hidden,
+                            long_his_hidden,
                             short_his_hidden,
                             edge_index,
                             edge_attr=None):
@@ -123,7 +123,7 @@ class ODNet(torch.nn.Module):
         long_his_out, long_his_hidden = self.encoder_first_unfinished_cells(inputs=batch.history,
                                                                             edge_index=edge_index,
                                                                             edge_attr=edge_attr,
-                                                                            hidden=unfinished_hidden)
+                                                                            hidden=long_his_hidden)
 
         short_his_out, short_his_hidden = self.encoder_first_short_his_cells(inputs=batch.yesterday,
                                                                              edge_index=edge_index,
@@ -141,7 +141,7 @@ class ODNet(torch.nn.Module):
         enc_first_out = finished_out + unfinished_out
         enc_first_hidden = enc_first_hidden + unfinished_hidden
 
-        return enc_first_out, finished_hidden, unfinished_hidden, short_his_hidden, enc_first_hidden
+        return enc_first_out, finished_hidden, long_his_hidden, short_his_hidden, enc_first_hidden
 
     def encoder_second_layer(self,
                              index,

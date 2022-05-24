@@ -34,10 +34,8 @@ class Net(torch.nn.Module):
         self.head = cfg['model'].get('head', 4)
         self.d_channel = cfg['model'].get('channel', 512)
 
-        self.use_curriculum_learning = self.cfg['model'][
-            'use_curriculum_learning']
-        self.cl_decay_steps = torch.FloatTensor(
-            data=[self.cfg['model']['cl_decay_steps']])
+        self.use_curriculum_learning = self.cfg['model']['use_curriculum_learning']
+        self.cl_decay_steps = torch.FloatTensor(data=[self.cfg['model']['cl_decay_steps']])
         self.use_input = cfg['model'].get('use_input', True)
 
         self.mediate_activation = nn.PReLU(self.num_units)
@@ -91,15 +89,15 @@ class Net(torch.nn.Module):
         enc_hiddens_do = [None] * self.num_rnn_layers
 
         finished_hidden_od = None
-        unfinished_hidden_od = None
+        long_his_hidden_od = None
         short_his_hidden_od = None
 
         for t, batch in enumerate(sequences):
             encoder_first_out_od, finished_hidden_od, \
-            unfinished_hidden_od, short_his_hidden_od, \
+            long_his_hidden_od, short_his_hidden_od, \
             enc_first_hidden_od = self.OD.encoder_first_layer(batch,
                                                               finished_hidden_od,
-                                                              unfinished_hidden_od,
+                                                              long_his_hidden_od,
                                                               short_his_hidden_od,
                                                               edge_index,
                                                               edge_attr)
