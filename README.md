@@ -16,7 +16,7 @@ If you use this code for your research, please cite our papers.
 ### Extract dataset
 Please download the dataset and extract it to `data` folder.
 - [Dropbox link](https://www.dropbox.com/sh/4pgk4uez7g200fg/AACHN6wMhjq_v0R2ZZ8ZeI6ma?dl=0)
-- [百度网盘，提取码：q6e0 ](https://pan.baidu.com/s/1PHN8SNT3jTroX0sTWHsrXw)
+- [Baidu Netdisk，password：q6e0 ](https://pan.baidu.com/s/1PHN8SNT3jTroX0sTWHsrXw)
 
 ## Train
 - SHMOD
