@@ -237,7 +237,7 @@ def main(args):
     src = []
     dst = []
     for g in graph_pkl_filename:
-        adj_mx = utils.load_graph_data_hz(g)
+        adj_mx = utils.load_graph_data(g)
         for i in range(len(adj_mx)):  # 构建邻接矩阵
             adj_mx[i, i] = 0
         adj_mx_list.append(adj_mx)
