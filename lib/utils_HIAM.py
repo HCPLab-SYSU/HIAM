@@ -212,8 +212,8 @@ def load_dataset(dataset_dir,
 
     for category in ['train', 'val', 'test']:
         cat_data = load_pickle(os.path.join(dataset_dir, category + '.pkl'))
-        history_data = load_pickle(os.path.join(dataset_dir, category + '_history_all.pkl'))
-        yesterday_data = load_pickle(os.path.join(dataset_dir, category + '_history_yesterday.pkl'))
+        history_data = load_pickle(os.path.join(dataset_dir, category + '_history_long.pkl'))
+        yesterday_data = load_pickle(os.path.join(dataset_dir, category + '_history_short.pkl'))
         do_data = load_pickle(os.path.join(do_dataset_dir, category + '_do.pkl'))
         data['x_' + category] = cat_data['finished']
         data['unfinished_' + category] = cat_data['unfinished']
