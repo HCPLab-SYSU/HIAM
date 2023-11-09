@@ -4,8 +4,8 @@ log_level: INFO
 data:
   batch_size: 8
   test_batch_size: 8
-  dataset_dir: data/shanghai/OD/OD_76
-  do_dataset_dir: data/shanghai/DO/DO_76
+  dataset_dir: data/shanghai/OD/
+  do_dataset_dir: data/shanghai/DO/
   graph_pkl_filename: [ data/shanghai/graph_sh_conn.pkl]
 
 model:
