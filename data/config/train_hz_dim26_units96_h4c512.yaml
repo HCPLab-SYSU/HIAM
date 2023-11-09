@@ -4,8 +4,8 @@ log_level: INFO
 data:
   batch_size: 32
   test_batch_size: 32
-  dataset_dir: data/hangzhou/OD/OD_26
-  do_dataset_dir: data/hangzhou/DO/DO_26
+  dataset_dir: data/hangzhou/OD/
+  do_dataset_dir: data/hangzhou/DO/
   graph_pkl_filename: [ data/hangzhou/graph_hz_conn.pkl]
 
 model:
